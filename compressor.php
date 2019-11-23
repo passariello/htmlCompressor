@@ -54,7 +54,7 @@ $html = str_replace('{!','<!', $html);
 $html = str_replace('--}','-->', $html);
 $html = str_replace(']}',']>', $html);
 $html = preg_replace_callback("/(&#[0-9]+;)/", function($m){return mb_convert_encoding($m[1], $GLOBALS['CHAR_ENCODE'], "HTML-ENTITIES");}, $html);
-$html = preg_replace_callback("/([a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4})/", function($m){return encode2($m[1]);}, $html);
+$html = preg_replace_callback("/([a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4})/", function($m){return mb_convert_encoding($m[1], $GLOBALS['CHAR_ENCODE'], "HTML-ENTITIES");}, $html);
 
 clearstatcache();
 flush();
