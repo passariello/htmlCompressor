@@ -1,8 +1,6 @@
 # htmlCompressor
 html compressor for receive only one line of html code in browser (use as include in head of your code).
 
-Created by Dario Passariello
-
 The MIT License (MIT)
 Copyright (c) 2016 Dario Passariello
 Permission is hereby granted, free of charge, to any person obtaining a copy
